@@ -1,6 +1,4 @@
 
-import './App.css';
-
 import {
   BrowserRouter,
   Routes,
@@ -15,14 +13,19 @@ import Remeras from './components/Pages/Remeras';
 function App() {
   return (  
     
-    <BrowserRouter>
-    <NavBar />
-      <Routes>
-        <Route path='/' element={<Inicio/>} />
-        <Route path='/pantalones' element={<Pantalones/>} />
-        <Route path='/remeras' element={<Remeras/>} />
-      </Routes>
-    </BrowserRouter>
+      <div>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={<Inicio/>} />
+            <Route path='/pantalones' element={<Pantalones/>} />
+            <Route path='/remeras' element={<Remeras/>} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+
+
+
   );
 }
 

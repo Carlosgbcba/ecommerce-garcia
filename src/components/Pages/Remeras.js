@@ -1,10 +1,12 @@
 import React from 'react'
+import ItemListContainer from '../ItemListContainer';
+
 
 const remeras = () => {
     return (
-        <div className="d-flex justify-content-center">
-            <h1>Pagina Remeras</h1>
-        </div>
+        <>
+            <ItemListContainer mensaje="Pagina Remeras"/>
+        </>
     )
 }
 
