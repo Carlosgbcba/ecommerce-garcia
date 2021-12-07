@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border: 1px solid rgb(95, 95, 95);    
+    border-radius: 10px;
+}
+
+p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count-btn{
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+}
+
+.add-btn{
+    background-color: white;
+    border: 1.5px solid grey;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+}
+
+.add-btn:hover{
+    background-color: rgb(187, 187, 187);
+    border: 1.5px solid black;
+}
