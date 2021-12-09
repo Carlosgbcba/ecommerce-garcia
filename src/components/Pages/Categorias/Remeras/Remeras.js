@@ -1,9 +1,9 @@
-import ItemListContainer from '../../../ItemListContainer/ItemListContainer';
+import PageTitles from '../../../PageTitles'
 
 export default function Inicio() {
     return (
         <>
-            <ItemListContainer mensaje="Pagina Remeras"/>
+            <PageTitles title="Pagina Remeras" />
         </>
     )
 }
