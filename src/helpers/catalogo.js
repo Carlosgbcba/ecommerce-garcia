@@ -1,13 +1,10 @@
 const productos = [
-    {id: '1', name:'Remera', description:'remera basica', price:500, stock:10 },
-    {id: '2', name:'Chomba', description:'chomba pique', price:100, stock:5 },
-    {id: '3', name:'Camisa', description:'camisa mangas cortas', price:1000, stock:20 },
-    {id: '4', name:'Pantalon vestir', description:'pantalon de gabardina', price:100, stock:10 },
-    {id: '5', name:'Pantalon corto', description:'pantalon corto vestir', price:220, stock:15 }, 
-    {id: '6', name:'Remera mangas largas', description:'pantalon corto vestir', price:220, stock:15 }, 
-    {id: '7', name:'Medias', description:'pantalon corto vestir', price:220, stock:15 }, 
-    {id: '8', name:'Pantalon corto', description:'pantalon corto vestir', price:220, stock:15 }, 
-    {id: '9', name:'Pantalon corto', description:'pantalon corto vestir', price:220, stock:15 },  
+    {id: '1', name:'Remera Oversize', description:'Remera lisa de jersey peinado de algodon 24/1', price:2000, stock:15, image:'img/remeraOversize.jpeg' },
+    {id: '2', name:'Pantalon Cuadriculado', description:'Pantalon cuadriculado principe de gales', price:5000, stock:15, image:'img/pantalonCuadros.jpeg' }, 
+    {id: '3', name:'Chomba Oversize', description:'Chomba lisa oversize de pique', price:4500, stock:10, image:'img/chombaOversize.jpeg' },
+    {id: '4', name:'Pantalon Vestir', description:'Pantalon de gabardina', price:5000, stock:10, image:'img/pantalonVestir.jpeg' },
+    {id: '5', name:'Jogger', description:'Jogger frizado', price:2500, stock:20, image:'img/jogger.jpeg' },
+    {id: '6', name:'Pantalon al Tobillo', description:'Pantalon amplio de gabardina a la altura del tobillo', price:5000, stock:15, image:'img/pantalon2.jpeg'},  
 ]
   
 export const catalogo = new Promise( (resolve, reject) => {
