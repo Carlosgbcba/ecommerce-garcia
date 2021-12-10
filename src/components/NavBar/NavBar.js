@@ -15,7 +15,7 @@ import Envios from '../Pages/Envios/Envios'
 import Remeras from '../Pages/Categorias/Remeras/Remeras'
 import Pantalones from '../Pages/Categorias/Pantalones/Pantalones'
 
-function NavBar() {
+export default function NavBar() {
     return (
         <>
             <BrowserRouter>
@@ -51,5 +51,3 @@ function NavBar() {
         </>
     )
 }
-
-export default NavBar

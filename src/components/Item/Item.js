@@ -16,7 +16,7 @@ export default function Item({item}) {
                         <Card.Text>
                             {item.description}
                         </Card.Text>
-                        <Button variant="secondary">Ver detalle</Button>
+                        <Button variant="secondary">Comprar</Button>
                     </Card.Body>
                 </Card>
             </Col>

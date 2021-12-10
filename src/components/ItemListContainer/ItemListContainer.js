@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import {catalogo} from '../../helpers/catalogo';
 import ItemList from "../ItemList/ItemList";
+import Container from 'react-bootstrap/esm/Container';
 
 const IntemListContainer = ( {msg} ) => {
     const [productos, setProductos] = useState ([])
@@ -14,7 +15,7 @@ const IntemListContainer = ( {msg} ) => {
     }, [])
 
     return (
-        <div>
+        <Container>
             <h2 style={{textDecoration: "underline"}}>
                 {msg}
             </h2>
@@ -22,7 +23,7 @@ const IntemListContainer = ( {msg} ) => {
             {loading ? <h2>Cargando...</h2> 
             : 
             <ItemList items={productos} />}
-        </div>
+        </Container>
     )
 }
 
