@@ -14,10 +14,11 @@ import Contacto from '../Pages/Contacto/Contacto';
 import Envios from '../Pages/Envios/Envios'
 import Remeras from '../Pages/Categorias/Remeras/Remeras'
 import Pantalones from '../Pages/Categorias/Pantalones/Pantalones'
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
 export default function NavBar() {
     return (
-        <>
+        <div>
             <BrowserRouter>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Container>
@@ -26,8 +27,8 @@ export default function NavBar() {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <NavDropdown title="Categorias" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="/remeras">Remeras</NavDropdown.Item>
-                                <NavDropdown.Item href="/pantalones">Pantalones</NavDropdown.Item>
+                                <NavDropdown.Item href="/categoria/remeras" >Remeras</NavDropdown.Item>
+                                <NavDropdown.Item href="/categoria/pantalones" >Pantalones</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="/envios">Envios</Nav.Link>
                             <Nav.Link href="/contacto">Contacto</Nav.Link>
@@ -43,11 +44,12 @@ export default function NavBar() {
                         <Route path='/' element={<Inicio/>} />
                         <Route path='/envios' element={<Envios/>} />
                         <Route path='/contacto' element={<Contacto/>} />
-                        <Route path='/remeras' element={<Remeras/>} />
-                        <Route path='/pantalones' element={<Pantalones/>} />
+                        <Route path='/categoria/remeras' element={<Remeras />} />
+                        <Route path='/categoria/pantalones' element={<Pantalones />} />
+                        <Route path='/comprar/:itemId' element={<ItemDetailContainer />} />    
                     </Routes>
                 </Switch>
             </BrowserRouter>
-        </>
+        </div>
     )
 }

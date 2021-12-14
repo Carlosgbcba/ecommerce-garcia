@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import './ItemCount.css'
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/esm/Container'
 
-export default function ItemCount({stock}) {
-    
-    const [count, setCount] = useState(0)
+export default function ItemCount({initial, stock}) {
+    const [count, setCount] = useState(initial)
 
     const sumar = () => {
         if (count < stock){
@@ -12,7 +12,7 @@ export default function ItemCount({stock}) {
     }
 
     const restar = () => {
-        if (count > 0){
+        if (count > initial){
             setCount(count-1)
         }
     }
@@ -20,21 +20,15 @@ export default function ItemCount({stock}) {
     const addToCart = () => {
         if(count > 0){
             console.log(`A seleccionado ${count} productos`)
-        } else {
-            console.log(`No ha seleccionado ningun producto`)
         }
     }
 
     return (
-        <center>
-            <div class="box">
-                <p>
-                    <button class="count-btn" onClick={restar}>-</button>
-                    {count}
-                    <button class="count-btn" onClick={sumar}>+</button>
-                </p>
-                <button class="add-btn" onClick={addToCart}>Agregar al carrito</button>
-            </div>
-        </center>
+        <Container>
+            <Button variant="outline-dark" onClick={restar}>-</Button>{' '}
+            {count}{' '}
+            <Button variant="outline-dark" onClick={sumar}>+</Button>{' '}
+            <Button variant="outline-dark" onClick={addToCart}>Agregar al carrito</Button>
+        </Container>
     )
 }

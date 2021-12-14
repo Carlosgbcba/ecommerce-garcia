@@ -1,18 +1,32 @@
 import { useState, useEffect } from 'react'
-import {catalogo} from '../../helpers/catalogo';
 import ItemList from "../ItemList/ItemList";
 import Container from 'react-bootstrap/esm/Container';
+import DataList from '../../helpers/JSON/DataList.json';
 
-const IntemListContainer = ( {msg} ) => {
-    const [productos, setProductos] = useState ([])
+const getItemList = new Promise( (resolve, reject) => {
+    setTimeout(()=>{
+        resolve(DataList)
+    }, 3000)
+})
+
+export default function IntemListContainer ( {categoryPage, msg} ) {
+    const [products, setProducts] = useState ([])
     const [loading, setLoading] = useState (true)
 
-    useEffect(()=> {
-        catalogo
-        .then(resp => setProductos(resp))
-        .catch(err => console.log(err))
-        .finally(()=>setLoading(false))
-    }, [])
+    useEffect(() => {
+        if(categoryPage){
+            getItemList
+            .then(data => {
+            setProducts(data.filter(item => item.category === categoryPage));
+          }).catch(err => console.log(err))
+          .finally(() => setLoading(false))
+        } else {
+            getItemList
+            .then(resp => setProducts(resp))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+        }
+      }, [categoryPage]);
 
     return (
         <Container>
@@ -22,9 +36,7 @@ const IntemListContainer = ( {msg} ) => {
              
             {loading ? <h2>Cargando...</h2> 
             : 
-            <ItemList items={productos} />}
+            <ItemList items={products} />}
         </Container>
     )
 }
-
-export default IntemListContainer

@@ -16,7 +16,7 @@ export default function Item({item}) {
                         <Card.Text>
                             {item.description}
                         </Card.Text>
-                        <Button variant="secondary">Comprar</Button>
+                        <Button variant="secondary" href={`/comprar/${item.id}`} >Comprar</Button>
                     </Card.Body>
                 </Card>
             </Col>
