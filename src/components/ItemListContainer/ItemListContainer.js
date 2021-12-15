@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import ItemList from "../ItemList/ItemList";
-import Container from 'react-bootstrap/esm/Container';
 import DataList from '../../helpers/JSON/DataList.json';
 
 const getItemList = new Promise( (resolve, reject) => {
@@ -9,7 +8,7 @@ const getItemList = new Promise( (resolve, reject) => {
     }, 3000)
 })
 
-export default function IntemListContainer ( {categoryPage, msg} ) {
+export default function IntemListContainer ( {categoryPage} ) {
     const [products, setProducts] = useState ([])
     const [loading, setLoading] = useState (true)
 
@@ -29,14 +28,10 @@ export default function IntemListContainer ( {categoryPage, msg} ) {
       }, [categoryPage]);
 
     return (
-        <Container>
-            <h2 style={{textDecoration: "underline"}}>
-                {msg}
-            </h2>
-             
+        <center>
             {loading ? <h2>Cargando...</h2> 
             : 
             <ItemList items={products} />}
-        </Container>
+        </center>
     )
 }

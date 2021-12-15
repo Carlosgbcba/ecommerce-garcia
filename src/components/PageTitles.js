@@ -5,6 +5,8 @@ export default function PageTitles( {title} ) {
             <h1>
                 <br />
                 {title}
+                <br />
+                <br />
             </h1>
         </div>
     )
