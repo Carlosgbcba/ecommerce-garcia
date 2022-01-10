@@ -14,6 +14,7 @@ import Contacto from '../Pages/Contacto/Contacto';
 import Envios from '../Pages/Envios/Envios'
 import Remeras from '../Pages/Categorias/Remeras/Remeras'
 import Pantalones from '../Pages/Categorias/Pantalones/Pantalones'
+import Carrito from '../Pages/Carrito/Carrito'
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
 export default function NavBar() {
@@ -34,7 +35,7 @@ export default function NavBar() {
                             <Nav.Link href="/contacto">Contacto</Nav.Link>
                         </Nav>
                         <Nav>
-                            <CartWidget/>
+                            <CartWidget />
                         </Nav>
                     </Navbar.Collapse>
                     </Container>
@@ -47,6 +48,7 @@ export default function NavBar() {
                         <Route path='/categoria/remeras' element={<Remeras />} />
                         <Route path='/categoria/pantalones' element={<Pantalones />} />
                         <Route path='/comprar/:itemId' element={<ItemDetailContainer />} />    
+                        <Route path='/carrito' element={<Carrito />} />    
                     </Routes>
                 </Switch>
             </BrowserRouter>

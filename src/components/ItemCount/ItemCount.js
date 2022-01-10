@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/esm/Container'
 
-export default function ItemCount({initial, stock}) {
+export default function ItemCount({initial, stock, onAdd}) {
     const [count, setCount] = useState(initial)
 
     const sumar = () => {
@@ -18,9 +18,7 @@ export default function ItemCount({initial, stock}) {
     }
 
     const addToCart = () => {
-        if(count > 0){
-            console.log(`A seleccionado ${count} productos`)
-        }
+        onAdd(count)
     }
 
     return (
