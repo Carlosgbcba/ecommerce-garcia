@@ -1,8 +1,9 @@
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
+import { Link } from 'react-router-dom'
 
-const loadImage = (imageName) => (require(`../../helpers/${imageName}`).default);
+const loadImage = (imageName) => (require(`../../helpers/${imageName}`).default)
 
 export default function Item({item}) {
     return (
@@ -16,7 +17,8 @@ export default function Item({item}) {
                         <Card.Text>
                             {item.description}
                         </Card.Text>
-                        <Button variant="secondary" href={`/comprar/${item.id}`} >Comprar</Button>
+                        {/* <Button variant="secondary" href={`/comprar/${item.id}`} >Comprar</Button> */}
+                        <Link to={`/comprar/${item.id}`}>Comprar</Link>
                     </Card.Body>
                 </Card>
             </Col>

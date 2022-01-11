@@ -17,16 +17,12 @@ export default function ItemCount({initial, stock, onAdd}) {
         }
     }
 
-    const addToCart = () => {
-        onAdd(count)
-    }
-
     return (
         <Container>
             <Button variant="outline-dark" onClick={restar}>-</Button>{' '}
             {count}{' '}
             <Button variant="outline-dark" onClick={sumar}>+</Button>{' '}
-            <Button variant="outline-dark" onClick={addToCart}>Agregar al carrito</Button>
+            <Button variant="outline-dark" onClick={()=> onAdd(count)} >Agregar al carrito</Button>
         </Container>
     )
 }
