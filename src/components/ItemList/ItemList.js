@@ -2,6 +2,8 @@ import Item from '../Item/Item'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
+// import { memo } from 'react'
+
 export default function ItemList( { items } ) {
     return (
         <Container>
@@ -13,3 +15,19 @@ export default function ItemList( { items } ) {
         </Container>
     )
 }
+
+// const ItemList = memo (
+//     ( { items } ) => {
+//         return (
+//             <Container>
+//                 <Row>
+//                 {Array.from({ length: 1 }).map((_, idx) => (
+//                     items.map(item => <Item item={item}/>)
+//                 ))}
+//                 </Row>
+//             </Container>
+//         )
+//     }
+// )
+
+// export default ItemList
