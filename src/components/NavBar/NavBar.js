@@ -17,8 +17,6 @@ export default function NavBar() {
                             <NavDropdown.Item href="/categoria/remeras" >Remeras</NavDropdown.Item>
                             <NavDropdown.Item href="/categoria/pantalones" >Pantalones</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="/envios">Envios</Nav.Link>
-                        <Nav.Link href="/contacto">Contacto</Nav.Link>
                     </Nav>
                     <Nav>
                         <CartWidget />

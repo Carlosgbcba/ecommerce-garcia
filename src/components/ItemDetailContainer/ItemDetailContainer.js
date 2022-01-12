@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import Container from 'react-bootstrap/esm/Container';
 import ItemDetail from '../ItemDetail/ItemDetail'
 import DataList from '../../helpers/JSON/DataList.json';
+import Loading from '../Loading/Loading';
 
 const getItem = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -25,7 +26,7 @@ export default function ItemDetailContainer () {
     return (
         <Container>
   
-            {loading ? <h2>Cargando...</h2> 
+            {loading ? <Loading />
             : 
             <ItemDetail item={item} />}
             

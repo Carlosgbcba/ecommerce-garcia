@@ -8,8 +8,6 @@ export default function CartWidget() {
 
     const cart = totalItems()
 
-
-
     return (
         <>
             <Button variant="success" href="/carrito" >

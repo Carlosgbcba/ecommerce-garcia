@@ -1,0 +1,6 @@
+.empty {
+    height: 700px;
+    width: 1%;
+    display: table-cell;
+    vertical-align: middle;
+};

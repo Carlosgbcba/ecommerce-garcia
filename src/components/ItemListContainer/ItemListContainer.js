@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import ItemList from "../ItemList/ItemList";
 import DataList from '../../helpers/JSON/DataList.json';
+import Loading from '../Loading/Loading';
 
 const getItemList = new Promise( (resolve, reject) => {
     setTimeout(()=>{
@@ -29,7 +30,7 @@ export default function IntemListContainer ( {categoryPage} ) {
 
     return (
         <center>
-            {loading ? <h2>Cargando...</h2> 
+            {loading ? <Loading />
             : 
             <ItemList items={products} />}
         </center>

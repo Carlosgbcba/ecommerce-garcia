@@ -26,8 +26,6 @@ export default function CartContextProvider({children}) {
         setCartList([])
     };
 
-    /////////
-
     function totalItems () {
         return cartList.reduce((acc, item) => acc + item.quantity, 0);
     }
@@ -35,8 +33,6 @@ export default function CartContextProvider({children}) {
     function totalCart () {
         return cartList.reduce((acc, item) => acc + item.price * item.quantity, 0);
     };
-
-    /////////
 
     return (
         <CartContext.Provider value={{
