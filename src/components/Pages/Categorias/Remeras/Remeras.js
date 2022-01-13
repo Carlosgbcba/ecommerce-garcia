@@ -4,7 +4,7 @@ import PageTitles from '../../../PageTitles/PageTitles'
 export default function Inicio() {
     return (
         <div>
-            <PageTitles title="Pagina Remeras" />
+            <PageTitles title="Catalogo Remeras" />
             <IntemListContainer categoryPage="remeras" msg="Catalogo remeras" />
         </div>
     )

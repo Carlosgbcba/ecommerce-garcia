@@ -13,10 +13,10 @@ import Carrito from './components/Pages/Carrito/Carrito'
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import CartContextProvider from "./Context/CartContext/CartContext";
 
-function App() {
+export default function App() {
 
   return (
-    <>
+    <div>
       <CartContextProvider>
         <BrowserRouter>
           <NavBar />
@@ -30,8 +30,6 @@ function App() {
           <Footer />
         </BrowserRouter>
       </CartContextProvider>
-    </>
+    </div>
   );
 }
-
-export default App;

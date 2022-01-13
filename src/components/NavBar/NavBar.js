@@ -7,7 +7,7 @@ import CartWidget from '../CartWidget/CartWidget'
 export default function NavBar() {
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{height:'4rem' }}>
                 <Container>
                 <Navbar.Brand href="/">SELECTO CLOTHES</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

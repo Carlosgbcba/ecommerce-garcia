@@ -49,3 +49,7 @@ export default function CartContextProvider({children}) {
           </CartContext.Provider>
     )
 }
+
+//   useEffect(() => {
+//     window.localStorage.setItem('count', count);
+//   }, [count]);
