@@ -1,8 +1,9 @@
 import Item from '../Item/Item'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import { memo } from 'react';
 
-export default function ItemList( { items } ) {
+const ItemList = memo (( { items } ) => {
     return (
         <Container>
             <Row>
@@ -12,4 +13,6 @@ export default function ItemList( { items } ) {
             </Row>
         </Container>
     )
-}
+})
+
+export default ItemList

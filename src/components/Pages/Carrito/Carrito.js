@@ -7,8 +7,6 @@ import Container from 'react-bootstrap/esm/Container';
 import Button from 'react-bootstrap/Button'
 import './Carrito.css'
 
-const loadImage = (imageName) => (require(`../../../helpers/${imageName}`).default)
-
 export default function Carrito() {
     const {cartList, removeFromCart, deleteFromCart, totalCart} = useCartContext()
     
@@ -31,7 +29,7 @@ export default function Carrito() {
                                 as="li"
                                 className="d-flex justify-content-between align-items-center"
                                 >
-                                <img src={loadImage(`${product.image}`)} alt="" width='75rem' height='75rem'/>
+                                <img src={product.image} alt="" width='75rem' height='75rem'/>
                                 <div className="ms-2 me-auto" style={{fontSize: "18px"}}>
                                     <div className="fw-bold">{product.name}</div>
                                     <p>${product.quantity * product.price}</p>

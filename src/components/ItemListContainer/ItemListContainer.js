@@ -1,32 +1,30 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import ItemList from "../ItemList/ItemList";
-import DataList from '../../helpers/JSON/DataList.json';
 import Loading from '../Loading/Loading';
 
-const getItemList = new Promise( (resolve, reject) => {
-    setTimeout(()=>{
-        resolve(DataList)
-    }, 3000)
-})
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
-export default function IntemListContainer ( {categoryPage} ) {
+const ItemListContainer = memo ( ( {categoryPage} ) => {
     const [products, setProducts] = useState ([])
     const [loading, setLoading] = useState (true)
 
     useEffect(() => {
+        
+        const db = getFirestore();
+
         if(categoryPage){
-            getItemList
-            .then(data => {
-            setProducts(data.filter(item => item.category === categoryPage));
-          }).catch(err => console.log(err))
-          .finally(() => setLoading(false))
+            const queryProducts = query(collection(db, 'productos'), where('category', '==', categoryPage));
+            getDocs(queryProducts)
+            .then(resp => { setProducts( resp.docs.map(product => ({id: product.id, ...product.data()})))
+            setLoading(false)   
+            })
         } else {
-            getItemList
-            .then(resp => setProducts(resp))
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false))
-        }
-      }, [categoryPage]);
+            const queryProducts = collection(db, 'productos');
+            getDocs(queryProducts)
+            .then(resp => { setProducts( resp.docs.map(product => ({id: product.id, ...product.data()})))
+            setLoading(false)
+        })
+    }}, [categoryPage]);
 
     return (
         <center>
@@ -35,4 +33,6 @@ export default function IntemListContainer ( {categoryPage} ) {
             <ItemList items={products} />}
         </center>
     )
-}
+})
+
+export default ItemListContainer; 
