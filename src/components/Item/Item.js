@@ -6,18 +6,18 @@ import './Item.css'
 export default function Item({item}) {
     return (
         <>
-            <Col sm={4} key={item.id} style={{ marginBottom: '30px' }}>
-                <Card style={{ width: '18rem', height:'29rem' }}>
-                    <Card.Img variant="top" src={item.image} height='300rem' />
-                    <Card.Body className="text-center">
-                        <Card.Title>{item.name}</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">${item.price}</Card.Subtitle>
-                        <Card.Text class="single-line">
-                            {item.description}
-                        </Card.Text>
-                        <Link class="btn btn-secondary" to={`/comprar/${item.id}`}>Comprar</Link>
-                    </Card.Body>
-                </Card>
+            <Col sm={4} key={item.id}>
+                <Link className="cardLink" to={`/comprar/${item.id}`}>
+                    <Card className="customCard" >
+                        <div className="imgContainer">
+                            <Card.Img variant="top" src={item.image} height='410rem'/>
+                        </div>
+                        <div>
+                                <p className="p1">{item.name}</p>
+                                <p>${item.price}</p>
+                        </div>
+                    </Card>
+                </Link>
             </Col>
         </>
     )
