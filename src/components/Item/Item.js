@@ -1,5 +1,4 @@
 import Card from 'react-bootstrap/Card'
-// import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import { Link } from 'react-router-dom'
 import './Item.css'
@@ -18,8 +17,7 @@ export default function Item({item}) {
                         <Card.Text class="single-line">
                             {item.description}
                         </Card.Text>
-                        {/* <Button variant="secondary" href={`/comprar/${item.id}`} >Detalle</Button> */}
-                        <Link to={`/comprar/${item.id}`}>Detalle</Link>
+                        <Link class="btn btn-secondary" to={`/comprar/${item.id}`}>Detalle</Link>
                     </Card.Body>
                 </Card>
             </Col>

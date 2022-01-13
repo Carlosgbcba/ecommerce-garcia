@@ -21,7 +21,7 @@ export default function CartContextProvider({children}) {
     function deleteFromCart (product) {
         setCartList(cartList.filter(item => item.id !== product.id))
     };
-    
+
     function removeFromCart () {
         setCartList([])
     };
@@ -40,16 +40,10 @@ export default function CartContextProvider({children}) {
             addToCart, 
             removeFromCart,
             deleteFromCart,
-
             totalItems,
             totalCart
-
             }}>
                 {children}
           </CartContext.Provider>
     )
 }
-
-//   useEffect(() => {
-//     window.localStorage.setItem('count', count);
-//   }, [count]);

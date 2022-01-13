@@ -12,13 +12,11 @@ const loadImage = (imageName) => (require(`../../../helpers/${imageName}`).defau
 export default function Carrito() {
     const {cartList, removeFromCart, deleteFromCart, totalCart} = useCartContext()
     
-    console.log("cartList: ", cartList);
-
     if (cartList < 1) {
         return (
             <center className='empty'>
                 <PageTitles title={'No hay productos en el carrito'} />
-                <Link to="/">Volver a la tienda</Link>
+                <Button variant="secondary" href="/" style={{fontSize: "20px"}} >Volver a la tienda</Button>
             </center>
         )
     } else {
@@ -47,7 +45,8 @@ export default function Carrito() {
                     </ListGroup>
                     <center>
                         <h4 style={{marginTop: "15px"}}>Total: ${totalCart()}</h4> 
-                        <Link to="">Terminar compra</Link>
+                        <Button variant="danger" style={{marginLeft: "100px", marginRight: "100px"}} onClick={() => removeFromCart()}>Vaciar carrito</Button>
+                        <Link class="btn btn-success" style={{marginLeft: "100px", marginRight: "100px"}} to="">Terminar compra</Link>
                     </center>
                 </Container>
             </div>
