@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import PulseLoader from "react-spinners/PulseLoader";
+import BarLoader from "react-spinners/BarLoader";
 import './Loading.css'
 
 export default function Loading() {
@@ -11,7 +11,7 @@ export default function Loading() {
 
     return (
         <center className="loading" style={{height: "300px"}} >
-            <PulseLoader css={style} size={15} />
+            <BarLoader css={style} height="5" width="200" />
         </center>
     )
 }

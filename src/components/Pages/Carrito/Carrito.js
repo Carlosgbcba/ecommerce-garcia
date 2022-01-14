@@ -44,7 +44,7 @@ export default function Carrito() {
                     <center>
                         <h4 style={{marginTop: "15px"}}>Total: ${totalCart()}</h4> 
                         <Button variant="danger" style={{marginLeft: "100px", marginRight: "100px"}} onClick={() => removeFromCart()}>Vaciar carrito</Button>
-                        <Link class="btn btn-success" style={{marginLeft: "100px", marginRight: "100px"}} to="">Terminar compra</Link>
+                        <Link class="btn btn-success" style={{marginLeft: "100px", marginRight: "100px"}} to="/formulario">Terminar compra</Link>
                     </center>
                 </Container>
             </div>
