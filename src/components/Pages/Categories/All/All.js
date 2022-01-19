@@ -2,11 +2,11 @@ import IntemListContainer from '../../../ItemListContainer/ItemListContainer'
 import PageTitles from '../../../PageTitles/PageTitles'
 
 
-export default function Inicio() {
+export default function All() {
     return (
         <div>
-            <PageTitles title="Catalogo Pantalones" />
-            <IntemListContainer categoryPage="pantalones" msg="Catalogo pantalones"/>
+            <PageTitles title="Catalogo" />
+            <IntemListContainer/>
         </div>
     )
 }

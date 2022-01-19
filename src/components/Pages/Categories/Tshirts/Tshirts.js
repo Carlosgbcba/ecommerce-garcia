@@ -1,7 +1,7 @@
 import IntemListContainer from '../../../ItemListContainer/ItemListContainer'
 import PageTitles from '../../../PageTitles/PageTitles'
 
-export default function Inicio() {
+export default function Tshirts() {
     return (
         <div>
             <PageTitles title="Catalogo Remeras" />

@@ -5,10 +5,10 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import Badge from 'react-bootstrap/Badge'
 import Container from 'react-bootstrap/esm/Container';
 import Button from 'react-bootstrap/Button'
-import './Carrito.css'
+import './Cart.css'
 
 export default function Carrito() {
-    const {cartList, removeFromCart, deleteFromCart, totalCart} = useCartContext()
+    const {cartList, addQuantity, removeQuantity, emptyCart, deleteFromCart, totalCart} = useCartContext()
     
     if (cartList < 1) {
         return (
@@ -34,17 +34,25 @@ export default function Carrito() {
                                     <div className="fw-bold">{product.name}</div>
                                     <p>${product.quantity * product.price}</p>
                                 </div>
+
+                                <button className="remove" onClick={()=>{removeQuantity(product)}}>
+                                    -
+                                </button>
                                 <Badge bg="secondary" style={{marginRight: "20px", fontSize: "15px"}} >
                                     x{product.quantity}
                                 </Badge>
+                                <button className="add" onClick={()=>{addQuantity(product)}}>
+                                    +
+                                </button>
+
                                 <Button variant="danger" onClick={() => deleteFromCart(product)}>X</Button>
                             </ListGroup.Item>
                         ))}
                     </ListGroup>
                     <center>
                         <h4 style={{marginTop: "15px"}}>Total: ${totalCart()}</h4> 
-                        <Button variant="danger" style={{marginLeft: "100px", marginRight: "100px"}} onClick={() => removeFromCart()}>Vaciar carrito</Button>
-                        <Link class="btn btn-success" style={{marginLeft: "100px", marginRight: "100px"}} to="/formulario">Terminar compra</Link>
+                        <Button variant="danger" style={{marginLeft: "100px", marginRight: "100px"}} onClick={() => emptyCart()}>Vaciar carrito</Button>
+                        <Link style={{marginLeft: "100px", marginRight: "100px"}} to="/formulario">Terminar compra</Link>
                     </center>
                 </Container>
             </div>

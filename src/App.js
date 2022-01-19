@@ -4,15 +4,16 @@ import {
   Route
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/NavBar/NavBar'
 import Footer from './components/Footer/Footer'
-import Inicio from './components/Pages/Inicio/Inicio'
-import Remeras from './components/Pages/Categorias/Remeras/Remeras'
-import Pantalones from './components/Pages/Categorias/Pantalones/Pantalones'
-import Carrito from './components/Pages/Carrito/Carrito'
-import Form from './components/Pages/Form/Form'
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import CartContextProvider from "./Context/CartContext/CartContext";
+import Home from './components/Pages/Home/Home'
+import All from './components/Pages/Categories/All/All'
+import Tshirts from "./components/Pages/Categories/Tshirts/Tshirts";
+import Pants from './components/Pages/Categories/Pants/Pants'
+import Cart from './components/Pages/Cart/Cart'
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+import CartContextProvider from "./Context/CartContext/CartContext"
+import Checkout from "./components/Pages/Checkout/Checkout"
 
 export default function App() {
 
@@ -22,12 +23,13 @@ export default function App() {
         <BrowserRouter>
           <NavBar />
             <Routes>
-              <Route path='/' element={<Inicio/>} />
-              <Route path='/categoria/remeras' element={<Remeras />} />
-              <Route path='/categoria/pantalones' element={<Pantalones />} />
+              <Route path='/' element={<Home/>} />
+              <Route path='/categoria/todo' element={<All />} />
+              <Route path='/categoria/remeras' element={<Tshirts />} />
+              <Route path='/categoria/pantalones' element={<Pants />}/>
               <Route path='/comprar/:itemId' element={<ItemDetailContainer />} />    
-              <Route path='/carrito' element={<Carrito />} />    
-              <Route path='/formulario' element={<Form />} />    
+              <Route path='/carrito' element={<Cart />} />    
+              <Route path='/formulario' element={<Checkout />} />    
             </Routes>
           <Footer />
         </BrowserRouter>
