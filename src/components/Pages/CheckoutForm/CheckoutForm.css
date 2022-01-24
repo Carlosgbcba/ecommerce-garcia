@@ -1,0 +1,22 @@
+.formContainer{
+    max-width: 90vh;
+}
+
+.orderForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer{
+    margin-bottom: 35px;
+}
+
+.inputForm{
+    width: 100%;
+}
+
+.errorInput{
+    color: red;
+    margin: 0;
+    padding: 0;
+}

@@ -1,9 +1,11 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import Button from 'react-bootstrap/Button'
+import './CheckoutForm.css'
 
 const CheckoutForm = ({ createOrder, handleChangeF}) => {
 
 	return (
-		<center>
+		<div className="formContainer">
             <Formik
                 initialValues={{
                     name: '',
@@ -47,25 +49,33 @@ const CheckoutForm = ({ createOrder, handleChangeF}) => {
                 { () => (
                     <Form className="orderForm" onSubmit={createOrder} onChange={handleChangeF}>
                         
-                        <Field type="text" name="name" id="name" placeholder="Nombre" required/>
-                        <ErrorMessage name="name" component="p" className="errorInput" />
+                        <div className="inputContainer">
+                            <Field className="inputForm" type="text" name="name" id="name" placeholder="Nombre" required/>
+                            <ErrorMessage name="name" component="p" className="errorInput" />
+                        </div>
 
-                        <Field type="email" name="email" id="email" placeholder="Correo electrónico" required />
-                        <ErrorMessage name="email" component="p" className="errorInput" />
-          
-                        <Field type="email" name="repeatEmail" id="repeatEmail" placeholder="Confirma tu correo electrónico" required />
-                        <ErrorMessage name="repeatEmail" component="p" className="errorInput" />
+                        <div className="inputContainer">
+                            <Field className="inputForm" type="email" name="email" id="email" placeholder="Correo electrónico" required />
+                            <ErrorMessage name="email" component="p" className="errorInput" />
+                        </div>
 
-                        <Field type="tel" name="phone" id="phone" placeholder="Teléfono" required/>
-                        <ErrorMessage name="phone" component="p" className="errorInput" />
+                        <div className="inputContainer">
+                            <Field className="inputForm" type="email" name="repeatEmail" id="repeatEmail" placeholder="Confirma tu correo electrónico" required />
+                            <ErrorMessage name="repeatEmail" component="p" className="errorInput" />
+                        </div>
 
-                        <button type="submit" className="btn-order">
+                        <div className="inputContainer"> 
+                            <Field className="inputForm" type="tel" name="phone" id="phone" placeholder="Teléfono" required/>
+                            <ErrorMessage name="phone" component="p" className="errorInput" />
+                        </div>
+
+                        <Button variant="secondary" type="submit" className="btn-order">
                             Generar Orden{" "}
-                        </button>
+                        </Button >
                     </Form>
                     )}
             </Formik>
-		</center>
+		</div>
 	);
 }
  

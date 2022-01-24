@@ -6,7 +6,7 @@ import './Item.css'
 export default function Item({item}) {
     return (
         <>
-            <Col sm={4} key={item.id}>
+            <Col xl={4} md={6} key={item.id}>
                 <Link className="cardLink" to={`/comprar/${item.id}`}>
                     <Card className="customCard" >
                         <div className="imgContainer">
