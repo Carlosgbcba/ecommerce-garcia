@@ -1,6 +1,7 @@
-.empty {
-    height: 700px;
-    width: 1%;
-    display: table-cell;
-    vertical-align: middle;
-};
+.emptyCart{
+    min-height: 500px;
+}
+
+.empty{
+    min-height: 150px;
+}

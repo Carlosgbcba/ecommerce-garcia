@@ -1,4 +1,5 @@
 .itemDetail{
+
     display: flex;
     -webkit-display: flex;
     -moz-display: flex;
@@ -7,11 +8,15 @@
     -webkit-flex-direction: row;
     -moz-flex-direction: row;
     -ms--flex-direction: row;
+
+    min-height: 500px;
+    max-height: 700px;
+
 }
 
 .imgDetail{
-    max-width: 600px;
-    max-height: 800px;
+    min-height: 500px;
+    max-height: 700px;
 }
 
 .itemInfo{

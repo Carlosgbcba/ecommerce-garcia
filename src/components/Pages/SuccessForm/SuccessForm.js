@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "./SuccessForm.css"
 
 const SuccessForm = ({ order, orderId }) => {
   return (
-  <center style={{fontSize: "20px"}}>
+  <div className="successForm" style={{fontSize: "20px"}}>
     <p>GRACIAS POR COMPRAR EN SELECTO CLOTHES</p>
     <br />
     <p> Su orden <b>{orderId}</b> se ha ingresado exitosamente.</p>
@@ -13,7 +14,7 @@ const SuccessForm = ({ order, orderId }) => {
     <br />
     <Link className="btn btn-secondary" to="/" style={{fontSize: "20px"}} > Volver a la tienda </Link>
 
-  </center>
+  </div>
   );
 };
 

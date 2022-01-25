@@ -76,16 +76,16 @@ const Checkout = () => {
   const handleChangeF = (e) => {setOrder({...order, [e.target.name]: e.target.value,})};
 
   return (
-    <center style={{marginTop: "50px"}}>
+    <center style={{margin: "auto"}}>
       <h2 style={{fontSize: "35px"}}>Checkout</h2>
       <br />
       {cartList.length > 0 ? ( <CheckoutForm createOrder={createOrder} handleChangeF={handleChangeF}/>
       ) : (
-        <div className="order">
+        <center className="order">
           {orderId ? (<SuccessForm order={order} orderId={orderId}/>)
           :
           (<Link className="btn btn-secondary" to="/" >Volver a la tienda</Link>)}
-        </div>
+        </center>
       )}
     </center>
   );

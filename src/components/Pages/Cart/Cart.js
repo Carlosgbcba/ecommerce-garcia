@@ -11,9 +11,10 @@ export default function Carrito() {
     
     if (cartList < 1) {
         return (
-            <center className='empty'>
+            <center className="emptyCart">
+                <div className='empty'></div>
                 <PageTitles title={'No hay productos en el carrito'} />
-                <Button variant="secondary" href="/" style={{fontSize: "20px"}} >Volver a la tienda</Button>
+                <Button className="btn-back" variant="secondary" href="/" style={{fontSize: "20px"}} >Volver a la tienda</Button>
             </center>
         )
     } else {
