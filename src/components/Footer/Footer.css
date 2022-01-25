@@ -1,9 +1,9 @@
-a{
+.socialMedia{
     color: rgb(110, 110, 110);
     text-decoration: none;
 }
 
-a:hover{
+.socialMedia:hover{
     color: rgb(110, 110, 110);
     text-decoration: none;
 }

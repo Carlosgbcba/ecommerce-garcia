@@ -11,11 +11,11 @@ export default function Footer() {
                 <br />
                 <br />
 
-                <a href="https://www.linkedin.com/in/carlos-garcia-barrera-4b729219a/" className="link" target="_blank" rel="noreferrer">
+                <a className="socialMedia" href="https://www.linkedin.com/in/carlos-garcia-barrera-4b729219a/" target="_blank" rel="noreferrer">
                     <FaLinkedin style={{ fontSize: "25px",  marginRight: "10px" }} /> 
                 </a>
 
-                <a href="https://github.com/Carlosgbcba/ecommerce-garcia" className="link" target="_blank" rel="noreferrer">
+                <a className="socialMedia" href="https://github.com/Carlosgbcba/ecommerce-garcia" target="_blank" rel="noreferrer">
                     <FaGithub style={{ fontSize: "25px",  marginLeft: "10px" }} /> 
                 </a>
 
