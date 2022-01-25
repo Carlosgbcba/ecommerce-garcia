@@ -1,6 +1,8 @@
 ![SELECTO-LOGO](https://firebasestorage.googleapis.com/v0/b/ecommerce-garcia.appspot.com/o/Carousel%2Flogo2.png?alt=media&token=15eb3992-9e06-43be-969e-df60ffa46133)
 
-_Ecommerce presentado como proyecto final de curso de ReactJS. La idea surge de un emprendimiento propio._
+_Ecommerce presentado como proyecto final de curso de ReactJS._
+
+_Se trata de una tienda de ropa para hombres que buscan un estilo clasico informal pero con un toque formal, colores elegantes, sin estampas y comodo_
 
 ## Demo 👕
 
