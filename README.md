@@ -2,7 +2,7 @@
 
 _Ecommerce presentado como proyecto final de curso de ReactJS._
 
-_Se trata de una tienda de ropa para hombres que buscan un estilo clasico informal pero con un toque formal, colores elegantes, sin estampas y comodo_
+_Se trata de una tienda de ropa para hombres que buscan un estilo clasico informal pero con un toque formal, colores elegantes, sin estampas y sobre todo estar comodos_
 
 ## Demo 👕
 
