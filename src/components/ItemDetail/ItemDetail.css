@@ -1,6 +1,12 @@
 .itemDetail{
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms--display: flex;    
     flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms--flex-direction: row;
 }
 
 .imgDetail{
@@ -9,10 +15,16 @@
 }
 
 .itemInfo{
-    width: 100%;
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms--display: flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms--flex-direction: column;
     justify-content: space-around;
+    width: 100%;
 }
 
 .titleDetail{
